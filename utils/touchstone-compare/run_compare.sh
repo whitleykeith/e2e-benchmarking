@@ -8,6 +8,10 @@ python3 -m venv ./venv
 source ./venv/bin/activate
 pip3 install git+https://github.com/cloud-bulldozer/benchmark-comparison
 
+git clone https://github.com/cloud-bulldozer/benchmark-comparison
+mv benchmark-comparison/config config
+rm -rf benchmark-comparison
+
 if [[ $? -ne 0 ]] ; then
   echo "Unable to execute compare - Failed to install touchstone"
   exit 1
